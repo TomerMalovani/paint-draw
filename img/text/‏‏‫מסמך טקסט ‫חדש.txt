@@ -1,0 +1,17 @@
+var plus = document.getElementById("plusfontSize");
+plus.addEventListener('click', biggerFont = function () {
+    heightsize++;
+    widthsize++;
+    brush_size.innerHTML = heightsize;
+   
+});
+
+var minus = document.getElementById("minusfontSize");
+minus.addEventListener('click', biggerFont = function () {
+    heightsize--;
+    widthsize--;
+    if (heightsize < 0)
+    heightsize = 0;
+    brush_size.innerHTML = heightsize;
+});
+
