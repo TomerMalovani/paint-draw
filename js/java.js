@@ -2,6 +2,7 @@ var paint = document.getElementById("canvans");
 var currentColor = "black";
 var heightsize = 4;
 var widthsize = 4;
+var ispaint = true;
 paint.addEventListener('mousedown', start = function () {
     paint.addEventListener('mousemove', startpaint);
 });
@@ -12,15 +13,22 @@ paint.addEventListener('mouseup', stop_paint = function () {
 
 function startpaint(eventobject) {
     console.log(eventobject);
-    var x = eventobject.layerX;
-    var y = eventobject.layerY;
-    var newpaint = document.createElement("span");
+    var x = eventobject.offsetX;
+    var y = eventobject.offsetY;
+    if (ispaint === true){
+    var newpaint = document.createElement("div");
     newpaint.className += "paint";
-    newpaint.style.left = x + "px";
-    newpaint.style.top = y + "px";
     newpaint.style.height = heightsize + "px";
     newpaint.style.width = widthsize + "px";
     newpaint.style.backgroundColor = currentColor;
+    }
+    if (ispaint === false){
+        var newpaint = document.createElement("span");
+        newpaint.className += "sticker"; 
+    }
+    newpaint.style.left = x + "px";
+    newpaint.style.top = y + "px";
+    
     var canvans = document.getElementById("canvans");
     canvans.appendChild(newpaint);
     newpaint.setAttribute('id', 'paintbrush');
@@ -38,34 +46,40 @@ color_info.style.backgroundColor = currentColor;
 
 
 color[0].addEventListener('click', (e) => {
+     ispaint = true;
     console.log(color);
     currentColor = e.target.id;
     color_info.style.backgroundColor = currentColor;
 
 });
 color[1].addEventListener('click', (e) => {
+     ispaint = true;
     console.log(color);
     currentColor = e.target.id
     color_info.style.backgroundColor = currentColor;
 });
 
 color[2].addEventListener('click', (e) => {
+    ispaint = true;
     console.log(color);
     currentColor = e.target.id;
     color_info.style.backgroundColor = currentColor;
 
 });
 color[3].addEventListener('click', (e) => {
+    ispaint = true;
     console.log(color);
     currentColor = e.target.id
     color_info.style.backgroundColor = currentColor;
 });
 color[4].addEventListener('click', (e) => {
+    ispaint = true;
     console.log(color);
     currentColor = e.target.id
     color_info.style.backgroundColor = currentColor;
 });
 color[5].addEventListener('click', (e) => {
+    ispaint = true;
     console.log(color);
     currentColor = e.target.id
     color_info.style.backgroundColor = currentColor;
@@ -86,7 +100,7 @@ plus.addEventListener('click', biggerFont = function () {
     heightsize++;
     widthsize++;
     brush_size.innerHTML = heightsize;
-   
+
 });
 
 var minus = document.getElementById("minusfontSize");
@@ -94,13 +108,12 @@ minus.addEventListener('click', biggerFont = function () {
     heightsize--;
     widthsize--;
     if (heightsize < 0)
-    heightsize = 0;
+        heightsize = 0;
     brush_size.innerHTML = heightsize;
 });
 
-
-
-
-
-
+var sticker = document.getElementById("sticker");
+sticker.addEventListener('click',sticker_apper = function(){
+ispaint = false;
+} );
 
