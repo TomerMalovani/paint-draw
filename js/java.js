@@ -16,7 +16,7 @@ function startpaint(eventobject) {
     var x = eventobject.offsetX;
     var y = eventobject.offsetY;
     if (ispaint === true){
-    var newpaint = document.createElement("div");
+    var newpaint = document.createElement("span");
     newpaint.className += "paint";
     newpaint.style.height = heightsize + "px";
     newpaint.style.width = widthsize + "px";
@@ -116,4 +116,6 @@ var sticker = document.getElementById("sticker");
 sticker.addEventListener('click',sticker_apper = function(){
 ispaint = false;
 } );
+
+
 
