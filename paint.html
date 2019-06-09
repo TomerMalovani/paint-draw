@@ -4,7 +4,6 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -14,49 +13,39 @@
 </head>
 
 <body>
- 
   <div class="container wrap">
     <div class="row cap">draw me a sheep</div>
     <div class="row  mainpage">
       <div class="col-2 sidebar borderRight">
         <div class="row colors_menu ">
-          <button class="col-6 colorbox red borderRight" id="red"></button>
-          <button class="col-6 colorbox green" id="green"></button>
+          <button class="col-6 colorbox txt_effect red borderRight" id="red"></button>
+          <button class="col-6 colorbox txt_effect green" id="green"></button>
         </div>
         <div class="row colors_menu">
-          <button class="col-6 colorbox yellow borderRight" id="yellow"></button>
-          <button class="col-6 colorbox black" id="black"></button>
+          <button class="col-6 colorbox txt_effect yellow borderRight" id="yellow"></button>
+          <button class="col-6 colorbox txt_effect black" id="black"></button>
         </div>
         <div class="row colors_menu">
-          <button class="col-6 colorbox blue borderRight" id="blue"></button>
-          <button class="col-6 colorbox purple" id="purple"></button>
+          <button class="col-6 colorbox txt_effect blue borderRight" id="blue"></button>
+          <button class="col-6 colorbox txt_effect purple" id="purple"></button>
         </div>
-        
-        <div class="row clean_btn border_button">
-          <div class="col-6 fontSize_btn borderRight" id="plusfontSize">+</div>
-          <div class="col-6 fontSize_btn" id="minusfontSize">-</div>
-
+        <div class="row  btns border_button">
+          <div class="col-6 fontSize_btn btns borderRight" id="plusfontSize">+</div>
+          <div class="col-6 fontSize_btn btns" id="minusfontSize">-</div>
         </div>
-        <div class="row info_tab border_button">
-          <div class="col-6 borderRight info_show" id="colorinfo"></div>
-          <div class="col-6 info_show size-index" id="sizeinfo">4</div>
+        <div class="row btns border_button">
+          <div class="col-6 borderRight fontSize_btn" id="colorinfo"></div>
+          <div class="col-6 fontSize_btn btns" id="sizeinfo">4</div>
         </div>
-        <div class="row clean_btn border_button" id="clean">
+        <div class="row  btns border_button" id="clean">
           clean
         </div>
-        <div class="row clean_btn border_button" id="sticker">
-          <img src="img/logo.png imgbtn" >
-        </div>
-        
-        
-      
       </div>
-      <div class="col-10 canvans" id="canvans"><div class="patch"> </div></div>
+      <div class="col-10 canvans" id="canvans">
+        <div class="patch"> </div>
+      </div>
     </div>
   </div>
-
-
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

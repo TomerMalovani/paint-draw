@@ -13,22 +13,15 @@ paint.addEventListener('mouseup', stop_paint = function () {
 
 function startpaint(eventobject) {
     console.log(eventobject);
-    var x = eventobject.offsetX;
-    var y = eventobject.offsetY;
-    if (ispaint === true){
+    var x = eventobject.pageX - $('#canvans').offset().left;
+    var y = eventobject.pageY - $('#canvans').offset().top;
     var newpaint = document.createElement("span");
     newpaint.className += "paint";
     newpaint.style.height = heightsize + "px";
     newpaint.style.width = widthsize + "px";
     newpaint.style.backgroundColor = currentColor;
-    }
-    if (ispaint === false){
-        var newpaint = document.createElement("span");
-        newpaint.className += "sticker"; 
-    }
     newpaint.style.left = x + "px";
     newpaint.style.top = y + "px";
-    
     var canvans = document.getElementById("canvans");
     canvans.appendChild(newpaint);
     newpaint.setAttribute('id', 'paintbrush');
@@ -46,14 +39,14 @@ color_info.style.backgroundColor = currentColor;
 
 
 color[0].addEventListener('click', (e) => {
-     ispaint = true;
+    ispaint = true;
     console.log(color);
     currentColor = e.target.id;
     color_info.style.backgroundColor = currentColor;
 
 });
 color[1].addEventListener('click', (e) => {
-     ispaint = true;
+    ispaint = true;
     console.log(color);
     currentColor = e.target.id
     color_info.style.backgroundColor = currentColor;
@@ -111,11 +104,4 @@ minus.addEventListener('click', biggerFont = function () {
         heightsize = 0;
     brush_size.innerHTML = heightsize;
 });
-
-var sticker = document.getElementById("sticker");
-sticker.addEventListener('click',sticker_apper = function(){
-ispaint = false;
-} );
-
-
 

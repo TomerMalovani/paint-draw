@@ -2,6 +2,11 @@ body{
     background-image: url("../img/navy-blue-seamless-pattern-retro-260nw-1184868877.webp");
 }
 
+.sidebar{
+    background-color: rgb(139, 139, 139);  
+    border-radius:13px 0  0 13px;
+}
+
 .borderRight{
     border-right: 2px solid black;
 }
@@ -15,12 +20,12 @@ body{
 }
 .wrap{
     height:100vh;
-    width: 100%;
     background-image: url("../img/navy-blue-seamless-pattern-retro-260nw-1184868877.webp");
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 0%;
 }
 
 .mainpage{
@@ -32,10 +37,8 @@ body{
     position: relative;
 }
 
-.colors_menu{
-    
+.colors_menu{ 
     height: 10vh;
-    
 }
 .colorbox{
     height: 10vh;
@@ -50,7 +53,6 @@ body{
 
 .colorbox.red{
      background-color: red;  
-    
     border-radius: 13px 0 0 0
 }
 
@@ -80,73 +82,37 @@ body{
     position: absolute;
     border-radius:  50px 
 }
-
-.clean_btn{
+.btns {
     height: 10%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: rgb(139, 139, 139);
+    align-items: center; 
+    background-color: rgb(139, 139, 139);  
     font-family: 'Francois One', sans-serif;
 }
+
 
 button:focus {outline:0;}
 
 .fontSize_btn{
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(139, 139, 139);
-    
 }
 
-.clean_btn:hover{
+.btns:hover{
     background-color: rgb(92, 92, 92);
     cursor: pointer;
-}
-
-.fontSize_btn:hover{
-    background-color: rgb(92, 92, 92);
-    cursor: pointer;
-}
-
-
-
-.info_tab{
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-}
-
-.info_show{
-    height: 100%;
-    
 }
 
 span{
     padding: 0;
     margin: 0;
-
 }
 
 .size-index{
-    justify-content: center;
     font-size: 2em;
-    align-items: center;  
-    display: flex;
-    font-family: 'Francois One', sans-serif;
-    background-color: rgb(139, 139, 139);
 }
 
-.sticker{
-    position: absolute;
-    background-image: url("../img/smliey.png");
-    height: 100px;
-    width: 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 0;
-}
+
+
+
 
